@@ -47,12 +47,9 @@ for i in range(3, n+6):
             for alpha in range(4):
                 angle_x, angle_y = angle[90*alpha+45][0], angle[90*alpha+45][1]
                 if padded_data[i+angle_x][j+angle_y] == 'M':
-                    print('M')
                     count_M += 1
                 if padded_data[i+angle_x][j+angle_y] == 'S':
-                    print('S')
                     count_S += 1
-            print(count_M, count_S)
             if count_M == 2 and count_S == 2: # we have a X shaped MAS
                 if padded_data[i+1][j+1] != padded_data[i-1][j-1]: 
                     # Just check if opposites are different -> Correct X shape
