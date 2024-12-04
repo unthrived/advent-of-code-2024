@@ -2,3 +2,5 @@ data/
 __pycache__/
 *.py[cod]
 *$py.class
+cookie.txt
+cron.py
