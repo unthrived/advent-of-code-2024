@@ -6,7 +6,6 @@ def read_txt(path, numbers=True):
                 numbers = list(map(int, line.split()))
                 data.append(numbers)
     else: 
-        # will change this, works for day03
         with open(path, "r") as file:
             for line in file:
                 data.append(line)
