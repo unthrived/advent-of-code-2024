@@ -8,5 +8,6 @@ def read_txt(path, numbers=True):
     else: 
         with open(path, "r") as file:
             for line in file:
+                line = line.strip()
                 data.append(line)
     return data
