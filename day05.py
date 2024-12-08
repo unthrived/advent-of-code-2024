@@ -1,4 +1,4 @@
-def checkLine(row, data, b=False):
+def check_line(row, data, b=False):
     for i in range(len(row)-1):
         for j in range(i+1, len(row)):
             check = [row[j], row[i]]
@@ -31,10 +31,10 @@ with open(path, "r") as file:
 
 sum = 0
 for row in range(len(test)):
-    sum = sum + checkLine(test[row], data)
+    sum = sum + check_line(test[row], data)
 print(sum)
 sum_b = 0
 for row in range(len(test)):
-    sum_b = sum_b + checkLine(checkLine(test[row], data, b=True), data)
+    sum_b = sum_b + check_line(check_line(test[row], data, b=True), data)
     # first instance of checkline just sorts, second instance does A again
 print(sum_b-sum)
